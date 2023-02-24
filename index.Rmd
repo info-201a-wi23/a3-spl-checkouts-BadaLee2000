@@ -1,86 +1,93 @@
 ---
-title: "A3: SPL Library Checkouts"
-output: html_document
+title: 'A3: SPL Library Checkouts'
+output:
+  html_document: default
+  pdf_document: default
 ---
-
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+library("dplyr")
+library("ggplot2")
+```
 ### Introduction
 
-An introduction of the data and a description of the trends/books/items you are choosing to analyze (and why!)
+I have included three charts that shows trends of people's preference over the type of books including, Ebooks, printed books, and sound disc. The reason why I chose these three material types is that I thought the comparison of the three materials are going to show us the changing trend in each material type and the overall trends. 
 
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
-
-These will likely be calculated using your DPLYR skills, answering questions such as:
+The following 19 values show the number of checkouts or the mean of the checkouts for each materials. I am particulary interested in the material types for printed books, ebooks, and sound disc because those three materials are the one that I am familiar with. 
 
 - What is the average number of checkouts for each item?
-- What is the month or year with the most/least checkouts for a book that you're interested in?
-- What is the month or year with the most/least checkouts for ebooks?
-- How has the number of print book checkouts changed over time?
+The average number of checkouts for each item (4 values total):
 
-Feel free to calculate and report values that you find relevant.
+EBOOK: 3.403392
+BOOK: 2.847207
+AUDIOBOOK: 4.761147
+SOUNDDISC: 1.596941
+
+- What is the month or year with the most checkouts for ebooks?
+The month with the most checkouts for ebooks was September.
+
+- What is the month or year with the least checkouts for ebooks?
+The month with the least checkouts for ebooks was June.
+
+- How has the number of print book checkouts changed over time?
+The average number of checkouts for each month has been changed over time as follows:
+
+2022.1 -2.965044
+2022.2 - 2.74244
+2022.3 - 2.911105
+2022.4 - 2.805779
+2022.5 - 2.828401
+2022.6 - 2.905877
+2022.7 - 2.787964
+2022.8 - 2.904679
+2022.9 - 2.808679
+2022.10 - 2.84046
+2022.11 - 2.818921
+2022.12 - 2.694061
+2023.1 - 2.965565
+
 
 ### The Dataset
 
-- Who collected/published the data?  
+- Who collected/published the data?
+The Seattle Public Library
+
 - What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?
-- How was the data collected or generated?  
+Months, Year, Usage Class, Checkout type, Material type, number of checkouts, Book Title, ISBN, Creator, Subjects, Publisher, Publication Year
+
+- How was the data collected or generated?
+The data is collecteed by using The Socrata Open Data API and it allows you to programmatically access a wealth of open data resources from governments, non-profits, and NGOs around the world.
+
 - Why was the data collected?  
-- What, if any, ethical questions do you need to consider when working with this data?  
+For the purpose of increasing the quality of life for our residents; increasing transparency, accountability and comparability; promoting economic development and research; and improving internal performance management.
+
+- What, if any, ethical questions do you need to consider when working with this data?
+I wonder the location of Seattle Public Libraries and want to know whether it is easy for everyone to access so that the result of data is equally collected.
+
 - What are possible limitations or problems with this data?   (at least 200 words)
+One of the possible limitations from this data are who did they collected the data from. Although Seattle Public Libraries are located in various location in Seattle, it is unclear that location of the libraries is easily approachable to everyone. In my personal experience, the public library was located in Wedgwood area where the age range is higher and majority of the visitors are white. If this is the case, we are not analyzing the data and cannot draw conclusions that can be applied to every sector of people in Seattle Area. Furthermore, since the age range of the neighborhood is higher than other neighborhoods, the data cannot be collected from all of the age ranges. This dataset might not represent the holistic view and type of people who got collected from the Seattle Public Library. Lastly, in order to figure the trend of checkouts in Material Type can be limited because there are so many people who purchase books from Amazon and other online based bookstores. This may also lay different results from other data collection which means that the data set from Seattle Public Library does not represent the current trend of book preferences and other possible trends.
 
 
 ### First Trends Over Time Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+The chart below shows the trend of number of checkouts for Ebooks in 2022. The reason why I included this chart is to see how people's preference of Ebook over printed books as the time goes. The chart shows that the number of checkouts for EBOOK is slowly increasing.   
 
-The first chart that you will create and include will show the trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, warning = FALSE, code = readLines("chart1_example.R")}
+```{r, echo = FALSE, warning = FALSE, code = readLines("chart1_example.R")}
 ```
 
 ### Second Trends Over Time Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
+The chart below shows the trend of number of checkouts for printed books in 2022. The reason why I included this chart is to see how people's preference of printed books has been remained the same of decreased over time. The chart shows that the number of checkouts for printed books has been decreased over time throughout the year of 2022. 
 
-The second chart that you will create and include will show another trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
+```{r, echo = FALSE, code = readLines("chart2_example.R")}
 ```
 
 ### Your Choice
 
-The last chart is up to you. It could be a line plot, scatter plot, histogram, bar plot, stacked bar plot, and more. Here are some requirements to help guide your design:
+The chart below shows the trend of number of checkouts for sound disc in 2022. The reason why I included this chart is to see how people's preference of sound disc has been remained the same of decreased over time. Surprisingly, the chart shows that the number of checkouts for sound disc has been increased dramatically over time throughout the year of 2022. 
 
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear legend title
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
+```{r, echo = FALSE, code = readLines("Chart3.R")}
 ```
 
 
