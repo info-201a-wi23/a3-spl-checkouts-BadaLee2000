@@ -14,7 +14,7 @@ I have included three charts that shows trends of people's preference over the t
 
 ### Summary Information
 
-The following 19 values show the number of checkouts or the mean of the checkouts for each materials. I am particulary interested in the material types for printed books, ebooks, and sound disc because those three materials are the one that I am familiar with. 
+The following 6 values show the number of checkouts or the mean of the checkouts for each materials. I am particulary interested in the material types for printed books, ebooks, and sound disc because those three materials are the one that I am familiar with. 
 
 - What is the average number of checkouts for each item?
 The average number of checkouts for each item (4 values total):
